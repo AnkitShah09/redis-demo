@@ -1,5 +1,8 @@
-package com.demo.redis_cache.model;
+package com.demo.redis_cache.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -7,12 +10,16 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
+@Entity
+@Table(name = "j_user")
 @Getter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDTO implements Serializable {
+public class User implements Serializable {
 
+    @Id
     private Long id;
+
     private String name;
 }

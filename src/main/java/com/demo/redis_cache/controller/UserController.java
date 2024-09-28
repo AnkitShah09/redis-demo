@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public UserDTO getUserByID(@PathVariable("id") String id) {
+    public UserDTO getUserByID(@PathVariable("id") Long id) {
         return userService.getUser(id);
     }
 
@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUserByID(@PathVariable("id") String id) {
+    public void deleteUserByID(@PathVariable("id") Long id) {
         userService.deleteUser(id);
     }
 }

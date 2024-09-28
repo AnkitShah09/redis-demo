@@ -8,9 +8,9 @@ public interface UserService {
 
     List<UserDTO> getAll();
 
-    UserDTO getUser(String id);
+    UserDTO getUser(Long id);
 
-    void addUser(UserDTO userDTO);
+    UserDTO addUser(UserDTO userDTO);
 
-    void deleteUser(String id);
+    void deleteUser(Long id);
 }
